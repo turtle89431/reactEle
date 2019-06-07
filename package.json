@@ -2,10 +2,11 @@
   "name": "react-parcel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "out/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel build main.js -o ../renderer.js -d ../"
+    "build":"parcel build ./gui/main.js -o ./out/renderer.js -d ./out/",
+    "start":"parcel build ./gui/main.js -o ./out/renderer.js -d ./out/ && yarn  --cwd ./out start"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "electron": "^5.0.2",
     "parcel-bundler": "^1.0.2"
   }
 }

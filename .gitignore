@@ -1,4 +1,4 @@
 node_modules
-gui/.cache
+.cache
 dist
-gui/node_modules
+out/node_modules
