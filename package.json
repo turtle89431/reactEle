@@ -5,8 +5,8 @@
   "main": "out/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build ./gui/main.js -o ./out/renderer.js -d ./out/ && yarn  --cwd ./out build",
-    "start": "parcel build ./gui/main.js -o ./out/renderer.js -d ./out/ && yarn  --cwd ./out start"
+    "build": "parcel build ./gui/main.js -o ./out/renderer/app.js -d ./out/renderer/ && yarn  --cwd ./out build",
+    "start": "parcel build ./gui/main.js -o ./out/renderer/app.js -d ./out/renderer/ && yarn  --cwd ./out start"
   },
   "author": "Walter Winser",
   "license": "ISC",
