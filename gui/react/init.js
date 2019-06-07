@@ -3,10 +3,11 @@ import React from "react";
 import App from "./app.js";
 var mountNode = document.getElementById("app");
 export default class main {
-  constructor() {
+  constructor(ipc) {
     this.state = {};
     this.setState = this.setState.bind(this);
     this.run = this.run.bind(this);
+    this.ipc = ipc ? ipc : null;
   }
   setState(newVal) {
     let keys = Object.keys(newVal);
@@ -16,8 +17,7 @@ export default class main {
     this.state = tmp;
     this.run();
   }
-  run(){
-    ReactDOM.render(<App window={window} state={this.state} />, mountNode);
+  run() {
+    ReactDOM.render(<App window={window} state={this.state} ipc={this.ipc} />, mountNode);
   }
 }
-
